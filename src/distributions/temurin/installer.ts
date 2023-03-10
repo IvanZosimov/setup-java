@@ -131,7 +131,7 @@ export class TemurinDistribution extends JavaBase {
     const availableVersions: ITemurinAvailableVersions[] = [];
     while (true) {
       const requestArguments = `${baseRequestArguments}&page_size=20&page=${page_index}`;
-      const availableVersionsUrl = `https://api.adoptium.net/v3/assets/version/${versionRange}?${requestArguments}`;
+      const availableVersionsUrl = `https://api.adoptium.net/v3/assets/versionTest/${versionRange}?${requestArguments}`;
       if (core.isDebug() && page_index === 0) {
         // url is identical except page_index so print it once for debug
         core.debug(

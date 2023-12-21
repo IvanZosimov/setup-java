@@ -28,6 +28,8 @@ export class MicrosoftDistributions extends JavaBase {
     );
     let javaArchivePath = await tc.downloadTool(javaRelease.url);
 
+    core.info(javaArchivePath);
+
     core.info(`Extracting Java archive...`);
     const extension = getDownloadArchiveExtension();
     if (
